@@ -14,10 +14,17 @@ body{
     background-image: url(../asset/img/IMG_9704\-2.JPG);
     background-repeat: no-repeat;
     background-position:center;
-    background-size: contain;
     height:900px;
+    background-size: contain;
     background-color: #5a7cb0;
 }
+
+:root{
+    --bs-link-color: black;
+    --bs-link-hover-color: black;
+    color: black;
+}
+
 
 .navbar{
     padding-bottom: 0px;
@@ -27,16 +34,13 @@ body{
     background-image: linear-gradient(white,#456088,#5a7cb0);
     top: 0px;
     position: sticky;
+    z-index: 8;
 }
 
-.ulclass{
-    display: flex;
-    list-style-type: none;
-    justify-content: space-around;
-    height: 100px;
-    padding-top: 30px;
+.nav{
+    justify-content: space-evenly;
+    width: 100%;
 }
-
 
 .anav{
     text-decoration:none;
@@ -46,8 +50,8 @@ body{
     font-size: 26px;
     color: black;
     list-style-type: none;
-    font-weight: 500;
 }
+
 
 
 .pie-de-pagina{
@@ -55,8 +59,8 @@ body{
     justify-content:space-between;
     background-image: linear-gradient(#5a7cb0,#456088,white);
     width: 100%;
-    margin-top: 20px;
-    padding-top: 65px;
+    margin-top: 80px;
+    padding-top: 40px;
   
 }
 
@@ -86,7 +90,8 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/*home*/
+/*home*/ 
+    
 .nfth1{
     color: aqua;
     font-size: 120px;
@@ -103,18 +108,21 @@ body{
 }
 
 .imgjr{ 
-    padding-right: 0px;
-    margin-left: 20px;
-    padding-left: 20px;
-    margin-top: 40px;
-    padding-top: 35px;
+padding-right: 0px;
+margin-left: 20px;
+padding-left: 20px;
+margin-top: 0px;
+padding-top: 25px;
 }
 
 .imgcream{
-margin-left: 20px;
-padding-left: 10px;
+    max-width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-bottom: 70px;
 }
-
 
 
 /*galery*/
@@ -164,51 +172,130 @@ padding-left: 10px;
 .section-ropa{
     background-image: linear-gradient(rgb(26, 22, 22), grey, grey);
     display: grid;
-    grid-template-rows: 450px 400px;
+    grid-template-rows: auto auto auto;
     grid-template-columns:100%;
 
-    grid-template-areas:"ropa-1" "ropa"  
-                        "ropa2" "ropa2" "ropa2";
-
-    row-gap: 40px;
+    grid-template-areas:    "ropa-1"  
+                            "ropa"    
+                            "ropa2";
+    row-gap: 0px;
 }
 
+
+.article-ropa1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    background-image: linear-gradient(rgb(26, 22, 22), grey, grey);
+    
+}
+
+.div-card{
+    color: white;
+    margin-top: 60px;
+    font-size: 26px;
+}
+
+.card{
+    --bs-card-spacer-y: 0rem;
+    --bs-card-spacer-x: 0rem;
+    --bs-card-title-spacer-y: 0rem;
+    --bs-card-border-width: 0px;
+    --bs-card-border-radius: 0rem;
+}
 
 .article-ropa{
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
-    padding-top: 20px;
+    padding-top: 40px;
+    margin-bottom: 0px;
+    background-image: linear-gradient(grey, grey, rgb(26, 22, 22));
+    padding-bottom: 20px;   
 }
+
+.article-ropa3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-image: linear-gradient(grey, grey, rgb(26, 22, 22));
+}
+
 
 .ropa{
     width: 30%;
     height: 90%;
     border-radius: 15px;
     grid-area: ropa;
+    box-shadow: 5px 10px 10px 20px
+    rgb(47, 43, 43);
+    transition: all 2s;
+    z-index: 1;
    
 }
+
+.ropa:hover{
+    width: 35%;
+    height: 100%;
+    border-radius: 15px;
+    transform: scale(1,1);
+    box-shadow: 5px 10px 10px 20px
+                rgb(47, 43, 43);
+
+}
+   
 
 .ropa-1{
     width: 30%;
     height: 90%;
     border-radius: 15px;
     grid-area: ropa-1;
-   
+    box-shadow: 5px 10px 10px 20px
+    rgb(47, 43, 43);
+    transition: all 2s;
+    z-index: 2;
+}
+
+
+
+.ropa-1:hover{
+    width: 35%;
+    height: 100%;
+    border-radius: 15px;
+    transform: scale(1,1);
+    box-shadow: 5px 10px 10px 20px
+                rgb(47, 43, 43);
 }
 
 .article-ropa2{
-display: flex;
-justify-content: space-evenly;
-margin-top: 40px;
-
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-image: linear-gradient(rgb(26, 22, 22), grey, grey);
 }
 
 
 .ropa2{
-    width: 400px;
-    height: 400px;
+    margin-top: 30px;
+    width:30%;
+    height: 80%;
     border-radius: 15px;
     grid-area: ropa2;
+    transition: all 2s;
+    box-shadow: 5px 10px 10px 20px
+                rgb(47, 43, 43);
+}
+
+
+.ropa2:hover{
+    width: 35%;
+    height: 85%;
+    border-radius: 15px;
+    transform: scale(1,1);
+    box-shadow: 5px 10px 10px 20px
+                rgb(47, 43, 43);
+                
 }
 
 
@@ -220,20 +307,20 @@ margin-top: 40px;
 }
 
 .about{
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin-left: 20px;
-  padding-left: 20px;
-  margin-left: 0px;
-  margin-top: 30px;
-  padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 20px;
+    padding-left: 20px;
+    margin-left: 0px;
+    margin-top: 30px;
+    padding-top: 30px;
 }
 
 .about1{
-width: 450px;
-margin-top: 30px;
-padding-top: 30px;
+    width: 450px;
+    margin-top: 30px;
+    padding-top: 30px;
 }
 
 
@@ -268,7 +355,7 @@ padding-top: 30px;
 .form{
     display: flex;
     flex-direction: column;
-    height: 700px;
+    height: 800px;
 }
 
 .label{
@@ -318,7 +405,7 @@ padding-top: 30px;
 /*media queries 
 footer and navbar*/
 
-@media  (max-width:690px){
+@media (max-width:690px){
     .anav{
         text-decoration:none;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -343,8 +430,7 @@ footer and navbar*/
         background-image: linear-gradient(#5a7cb0,#456088,white);
         width: 100%;
         padding-top: 0px;
-        margin-top: 30px;
-        
+        margin-top: 120px;  
     }
     
     
@@ -357,15 +443,14 @@ footer and navbar*/
         visibility: collapse;
     }
     .redes{
-        width: 100%;
+
+        width: auto;
         display: flex;
         justify-content: space-evenly;
         padding-top: 20px;
         margin-top: 10px;
-        margin-right: 5px;
+        margin-right: 45px;
         padding-right: 10px;
-
-
     }
     .icon{
         color: black,;
@@ -381,18 +466,18 @@ footer and navbar*/
         align-items: center;
     }
     
-.imgjr{ 
-margin-top: 10px;
-padding-top: 5px;
-width: 450px;
-height: 350px;
-margin-right: 120px;
-padding-right: 110px;
-  
-}
+     .imgjr{ 
+        margin-top: 10px;
+        padding-top: 5px;
+        width: 350px;
+        height: 300px;
+        margin-right: 65px;
+        padding-right: 110px;
+      }
+
 
 .imgcream{
-    width: 300px;
+    max-width: 100%;
     height: 300px;
     margin-top: 20px;
     margin-left: 0px;
@@ -406,10 +491,10 @@ padding-right: 110px;
 @media (max-width:690px) {
     
 .colection-helados{
-display: flex;
-flex-direction: column;
-align-items: center;
-background-image: linear-gradient(#5778aa,#373737,#597bae);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(#5778aa,#373737,#597bae);
 }
 
 
