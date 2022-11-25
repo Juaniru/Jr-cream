@@ -33,7 +33,7 @@ body{
     background-image: linear-gradient(white,#456088,#5a7cb0);
     top: 0px;
     position: sticky;
-    z-index: 3;
+    z-index: 8;
 }
 
 .nav{
@@ -89,6 +89,8 @@ body{
 /*media queries nav*/
 
 @media (max-width:990px) {
+
+
     .anav{
         text-decoration:none;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
